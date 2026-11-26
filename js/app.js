@@ -1,10 +1,11 @@
 import { Navbar } from "../components/navbar.component.js";
 import { Sidebar } from "../components/sidebar.component.js";
 import { initSidebar } from "../helpers/sidebar.helper.js";
+import { initNavigation } from "../helpers/navigation.helper.js";
+import { AppConfig } from "./app.config.js";
 
-// --- APPLICATION INITIALIZATION ---
-
-function init() {
+// RENDER LAYOUT
+function renderLayout(){
     const app = document.getElementById("app");
 
     app.innerHTML = `
@@ -13,15 +14,19 @@ function init() {
         <div id="app-layout" class="d-flex">
             ${Sidebar()}
 
-            <main id="app-content" class="flex-grow-1 p-4">
-                <h1>Dashboard</h1>
-            </main>
+            <main id="app-content" class="flex-grow-1 p-4"></main>
         </div>
-    `;
+    `
+}
 
+
+// INITIALIZE APP
+async function init() {
+
+    renderLayout();
     initSidebar();
-
-    console.log("Devnizer initialized successfully.");
+    await initNavigation();
+    console.log(`${AppConfig.name} v${AppConfig.version} initialized.`);
 }
 
 document.addEventListener("DOMContentLoaded", init);
