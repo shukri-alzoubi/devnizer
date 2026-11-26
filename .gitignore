@@ -1,0 +1,29 @@
+# --- OPERATING SYSTEM ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- EDITOR SETTINGS ---
+.vscode/
+.idea/
+*.swp
+
+# --- TEMPORARY FILES ---
+*.tmp
+*.temp
+*.bak
+
+# --- LOG FILES ---
+*.log
+logs/
+
+# --- ENVIRONMENT FILES ---
+.env
+.env.*
+!.env.example
+
+# --- DEPENDENCIES ---
+node_modules/
+
+# --- PRIVATE DIR ---
+roadmap.md
