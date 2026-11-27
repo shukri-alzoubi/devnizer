@@ -1,0 +1,38 @@
+/* --- MODAL CONTENT --- */
+
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--bs-box-shadow);
+}
+
+/* --- MODAL HEADER --- */
+
+.modal-header {
+    padding: 16px 20px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* --- MODAL BODY --- */
+
+.modal-body {
+    padding: 20px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* --- MODAL FOOTER --- */
+
+.modal-footer {
+    padding: 12px 20px;
+}
+
+.modal-footer .btn {
+    min-width: 80px;
+    font-size: 14px;
+    border-radius: var(--app-border-radius);
+}

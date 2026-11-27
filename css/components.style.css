@@ -1,0 +1,56 @@
+/* --- EMPTY STATE --- */
+
+.empty-state {
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.empty-state-icon {
+    font-size: 48px !important;
+    opacity: 0.65;
+}
+
+.empty-state-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.empty-state-description {
+    max-width: 400px;
+    margin-inline: auto;
+    font-size: 14px;
+}
+
+/* --- LOADING STATE --- */
+
+.loading-state {
+    min-height: 160px;
+}
+
+.loading-state .spinner-border {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+}
+
+.loading-message {
+    font-size: 14px;
+}
+
+/* --- TOAST NOTIFICATIONS --- */
+
+#toast-container {
+    z-index: 1090;
+    max-width: 100%;
+}
+
+#toast-container .toast {
+    border-radius: var(--app-border-radius);
+    box-shadow: var(--bs-box-shadow-sm);
+}
+
+#toast-container .toast-body {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
