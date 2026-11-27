@@ -1,5 +1,9 @@
+import { LoadingUI } from "../ui/loading.ui.js";
+
 export async function loadPage(path) {
     const content = document.getElementById("app-content");
+
+    content.replaceChildren(LoadingUI.render("Loading page..."));
 
     try {
         const response = await fetch(path);
