@@ -1,0 +1,116 @@
+/* --- PAGE HEADER --- */
+
+#dashboard-page .page-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#dashboard-page .page-header p {
+    font-size: 14px;
+}
+
+/* --- DASHBOARD CARDS --- */
+
+#dashboard-page .card {
+    border-radius: var(--app-border-radius);
+    box-shadow: var(--bs-box-shadow-sm);
+}
+
+#dashboard-page .card-body {
+    padding: 20px;
+}
+
+#dashboard-page .card-header {
+    padding: 16px 20px;
+}
+
+#dashboard-page .card-header h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* --- STATISTIC CARDS --- */
+
+#dashboard-page .card-body h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* --- PROJECT OVERVIEW --- */
+
+.project-overview-item {
+    padding: 16px 0;
+}
+
+.project-overview-item:first-child {
+    padding-top: 0;
+}
+
+.project-overview-item:last-child {
+    padding-bottom: 0;
+}
+
+.project-overview-item:not(:last-child) {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.project-overview-item h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-overview-item .progress {
+    height: 8px;
+    border-radius: 8px;
+}
+
+.project-overview-item .progress-bar {
+    border-radius: 8px;
+}
+
+/* --- RECENT TASKS --- */
+
+#recentTasks .table th {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#recentTasks .table td {
+    font-size: 14px;
+}
+
+#recentTasks .table th,
+#recentTasks .table td {
+    padding: 12px 20px;
+}
+
+#recentTasks .table tr:last-child td {
+    border-bottom: 0;
+}
+
+#recentTasks .badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+/* --- RESPONSIVE DASHBOARD --- */
+
+@media (max-width: 575.98px) {
+    #dashboard-page .page-header h1 {
+        font-size: 22px;
+    }
+
+    #dashboard-page .card-body {
+        padding: 16px;
+    }
+
+    #dashboard-page .card-header {
+        padding: 12px 16px;
+    }
+
+    #recentTasks .table {
+        min-width: 550px;
+    }
+}
