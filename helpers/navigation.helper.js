@@ -1,6 +1,7 @@
 import { AppConfig } from "../js/app.config.js";
 import { AppRoutes } from "../js/app.routes.js";
 import { loadPage } from "./page.helper.js";
+import { initProjects } from "../js/projects.controller.js";
 
 // GET CURRENT ROUTE
 export function getCurrentRoute() {
@@ -26,7 +27,7 @@ export function updateActiveLinks(page) {
 }
 
 // UPDATE PAGE TITLE
-function updatePageTitle(route){
+function updatePageTitle(route) {
     document.title = `${route.title} | ${AppConfig.name}`
 }
 
@@ -38,7 +39,11 @@ export async function navigate() {
     updateActiveLinks(page);
     updatePageTitle(route);
 
-    await loadPage(route.path);
+    const loaded = await loadPage(route.path);
+
+    if (loaded && page === "projects") {
+        initProjects();
+    }
 }
 
 // INITIALIZE NAVIGATION

@@ -1,6 +1,51 @@
 <section id="projects-page">
-    <h1>Projects</h1>
-    <p class="text-body-secondary">
-        Organize and manage your development projects.
-    </p>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+
+        <div>
+            <h1 class="h3 fw-bold mb-1">Projects</h1>
+            <p class="text-body-secondary mb-0">
+                Organize and manage your development projects.
+            </p>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="newProjectBtn">
+            <i class="bi bi-plus-lg me-2"></i>New Project
+        </button>
+
+    </header>
+
+    <!-- PROJECT TOOLBAR -->
+    <div class="row g-3 mb-4" id="projectToolbar">
+
+        <!-- SEARCH -->
+        <div class="col-12 col-md">
+            <div class="input-group">
+                <span class="input-group-text bg-body">
+                    <i class="bi bi-search"></i>
+                </span>
+
+                <input type="search" class="form-control" id="projectSearch" placeholder="Search projects..."
+                    aria-label="Search projects">
+            </div>
+        </div>
+
+        <!-- STATUS FILTER -->
+        <div class="col-12 col-md-auto">
+            <select class="form-select" id="projectStatusFilter" aria-label="Filter projects by status">
+
+                <option value="all">All Statuses</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+                <option value="archived">Archived</option>
+
+            </select>
+        </div>
+
+    </div>
+
+    <!-- PROJECT CONTAINER -->
+    <div class="row g-3" id="projectList"></div>
+
 </section>
