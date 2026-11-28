@@ -1,6 +1,170 @@
 <section id="dashboard-page">
-    <h1>Dashboard</h1>
-    <p class="text-body-secondary">
-        Overview of your projects, tasks, and development progress.
-    </p>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header mb-4">
+        <h1 class="h3 fw-bold mb-1">Dashboard</h1>
+        <p class="text-body-secondary mb-0">
+            Overview of your projects, tasks, and development progress.
+        </p>
+    </header>
+
+    <!-- STATISTICS -->
+    <div class="row g-3 mb-4">
+
+        <!-- TOTAL PROJECTS -->
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="text-body-secondary">Total Projects</span>
+                        <i class="bi bi-folder text-primary fs-4"></i>
+                    </div>
+                    <h2 class="fw-bold mt-3 mb-0" id="totalProjects">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOTAL TASKS -->
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="text-body-secondary">Total Tasks</span>
+                        <i class="bi bi-list-task text-primary fs-4"></i>
+                    </div>
+                    <h2 class="fw-bold mt-3 mb-0" id="totalTasks">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- IN PROGRESS -->
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="text-body-secondary">In Progress</span>
+                        <i class="bi bi-hourglass-split text-warning fs-4"></i>
+                    </div>
+                    <h2 class="fw-bold mt-3 mb-0" id="inProgressTasks">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPLETED TASKS -->
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="text-body-secondary">Completed Tasks</span>
+                        <i class="bi bi-check-circle text-success fs-4"></i>
+                    </div>
+                    <h2 class="fw-bold mt-3 mb-0" id="completedTasks">0</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PROJECT OVERVIEW -->
+    <div class="card mb-4" id="projectOverview">
+
+        <div class="card-header bg-body d-flex align-items-center justify-content-between">
+            <h5 class="mb-0">Project Overview</h5>
+
+            <a href="#projects" class="btn btn-sm btn-outline-primary">
+                View All
+            </a>
+        </div>
+
+        <div class="card-body" id="projectOverviewList">
+
+            <!-- TEMPORARY PROJECT PREVIEW -->
+            <div class="project-overview-item">
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Sample Project</h6>
+                    <span class="text-body-secondary">60%</span>
+                </div>
+
+                <div class="progress" role="progressbar" aria-label="Project completion" aria-valuenow="60"
+                    aria-valuemin="0" aria-valuemax="100">
+
+                    <div class="progress-bar" style="width: 60%"></div>
+
+                </div>
+
+                <small class="text-body-secondary d-block mt-2">
+                    6 of 10 tasks completed
+                </small>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RECENT TASKS -->
+    <div class="card mb-4" id="recentTasks">
+
+        <div class="card-header bg-body d-flex align-items-center justify-content-between">
+            <h5 class="mb-0">Recent Tasks</h5>
+
+            <a href="#tasks" class="btn btn-sm btn-outline-primary">
+                View All
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+
+                <thead class="table-light">
+                    <tr>
+                        <th>Task</th>
+                        <th>Project</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="recentTasksList">
+
+                    <!-- TEMPORARY TASK PREVIEW -->
+                    <tr>
+                        <td>Build application layout</td>
+                        <td>Sample Project</td>
+                        <td>
+                            <span class="badge text-bg-danger">High</span>
+                        </td>
+                        <td>
+                            <span class="badge text-bg-success">Done</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Create data models</td>
+                        <td>Sample Project</td>
+                        <td>
+                            <span class="badge text-bg-warning">Medium</span>
+                        </td>
+                        <td>
+                            <span class="badge text-bg-primary">In Progress</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Update documentation</td>
+                        <td>Sample Project</td>
+                        <td>
+                            <span class="badge text-bg-secondary">Low</span>
+                        </td>
+                        <td>
+                            <span class="badge text-bg-secondary">To Do</span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
 </section>
