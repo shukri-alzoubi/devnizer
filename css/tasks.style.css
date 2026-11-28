@@ -1,0 +1,197 @@
+/* --- PAGE HEADER --- */
+
+#tasks-page .page-header h1 {
+    font-size: 1.75rem;
+}
+
+#tasks-page .page-header p {
+    font-size: 0.875rem;
+}
+
+/* --- TASK TOOLBAR --- */
+
+#taskToolbar .form-control,
+#taskToolbar .form-select,
+#taskToolbar .input-group-text {
+    min-height: 40px;
+}
+
+/* --- VIEW CONTROLS --- */
+
+#taskCount {
+    font-size: 0.875rem;
+}
+
+#taskViewControls .btn {
+    font-size: 0.875rem;
+    min-width: 90px;
+}
+
+/* --- TASK LIST VIEW --- */
+
+#taskListView .card {
+    border-radius: var(--app-border-radius);
+    overflow: hidden;
+}
+
+#taskListView .table {
+    min-width: 800px;
+}
+
+#taskListView th {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 14px 16px;
+}
+
+#taskListView td {
+    padding: 16px;
+    font-size: 0.875rem;
+}
+
+#taskListView tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#taskListView tbody tr:hover td {
+    background-color: var(--bs-tertiary-bg);
+}
+
+.task-title {
+    font-size: 0.875rem;
+    overflow-wrap: anywhere;
+}
+
+.task-description {
+    display: block;
+    max-width: 280px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.task-project {
+    white-space: nowrap;
+}
+
+/* --- TASK ACTIONS --- */
+
+#tasks-page [data-action] {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- TASK BADGES --- */
+
+#tasks-page .badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+/* --- KANBAN BOARD --- */
+
+.kanban-column {
+    min-height: 440px;
+    border-radius: var(--app-border-radius);
+    background-color: var(--bs-tertiary-bg);
+}
+
+.kanban-column>.card-header {
+    padding: 16px;
+}
+
+.kanban-column>.card-header h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.kanban-list {
+    padding: 12px;
+}
+
+/* --- KANBAN TASK CARD --- */
+
+.kanban-card {
+    border-radius: var(--app-border-radius);
+    background-color: var(--bs-body-bg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.kanban-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kanban-card>.card-body {
+    padding: 16px;
+}
+
+.kanban-task-title {
+    font-size: 0.9375rem;
+    margin-bottom: 4px;
+    overflow-wrap: anywhere;
+}
+
+.kanban-task-project {
+    font-size: 0.75rem;
+}
+
+.kanban-task-description {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.kanban-task-date {
+    font-size: 0.75rem;
+}
+
+.kanban-card>.card-footer {
+    padding: 10px 12px;
+}
+
+/* --- TASK MODAL --- */
+
+#taskModal .form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+#taskModal .form-control,
+#taskModal .form-select {
+    font-size: 0.875rem;
+    min-height: 40px;
+}
+
+#taskModal textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 991.98px) {
+    .kanban-column {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #newTaskBtn {
+        width: 100%;
+    }
+
+    #taskViewControls .btn {
+        min-width: 75px;
+    }
+
+    #tasks-page .page-header h1 {
+        font-size: 1.5rem;
+    }
+}

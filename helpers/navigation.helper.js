@@ -2,6 +2,7 @@ import { AppConfig } from "../js/app.config.js";
 import { AppRoutes } from "../js/app.routes.js";
 import { loadPage } from "./page.helper.js";
 import { initProjects } from "../js/projects.controller.js";
+import { initTasks } from "../js/tasks.controller.js";
 
 // GET CURRENT ROUTE
 export function getCurrentRoute() {
@@ -36,14 +37,19 @@ export async function navigate() {
     const page = getCurrentRoute();
     const route = AppRoutes[page];
 
+    if (window.location.hash !== `#${page}`) {
+        history.replaceState(null, "", `#${page}`);
+    }
+
     updateActiveLinks(page);
     updatePageTitle(route);
 
     const loaded = await loadPage(route.path);
 
-    if (loaded && page === "projects") {
-        initProjects();
-    }
+    if (!loaded) return;
+
+    if (page === "projects") initProjects();
+    if (page === "tasks") initTasks();
 }
 
 // INITIALIZE NAVIGATION
