@@ -1,0 +1,123 @@
+/* --- PAGE HEADER --- */
+
+#projects-page .page-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#projects-page .page-header p {
+    font-size: 14px;
+}
+
+/* --- PROJECT TOOLBAR --- */
+
+#projectToolbar .form-control,
+#projectToolbar .form-select {
+    font-size: 14px;
+    min-height: 40px;
+}
+
+#projectToolbar .form-select {
+    min-width: 160px;
+}
+
+/* --- PROJECT CARD --- */
+
+.project-card {
+    border-radius: var(--app-border-radius);
+    box-shadow: var(--bs-box-shadow-sm);
+    transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: var(--bs-box-shadow);
+}
+
+.project-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- PROJECT INFORMATION --- */
+
+.project-name {
+    font-size: 18px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.project-description {
+    font-size: 14px;
+    min-height: 42px;
+    overflow-wrap: anywhere;
+    flex-grow: 1;
+}
+
+.project-card .badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+/* --- PROJECT PROGRESS --- */
+
+.project-card .progress {
+    height: 8px;
+    border-radius: 8px;
+}
+
+.project-card .progress-bar {
+    border-radius: 8px;
+}
+
+/* --- PROJECT ACTIONS --- */
+
+.project-card .card-footer {
+    padding: 12px 20px;
+}
+
+.project-card .card-footer .btn {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+/* --- PROJECT MODAL --- */
+
+#projectModal .form-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#projectModal .form-control,
+#projectModal .form-select {
+    font-size: 14px;
+}
+
+#projectModal textarea {
+    resize: vertical;
+}
+
+/* --- RESPONSIVE PROJECTS --- */
+
+@media (max-width: 575.98px) {
+    #projects-page .page-header h1 {
+        font-size: 22px;
+    }
+
+    .project-card .card-body {
+        padding: 16px;
+    }
+
+    .project-card .card-footer {
+        padding: 12px 16px;
+    }
+
+    #newProjectBtn {
+        width: 100%;
+    }
+}
