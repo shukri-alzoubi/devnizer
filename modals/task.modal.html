@@ -1,0 +1,119 @@
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- MODAL HEADER -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskModalTitle">New Task</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+
+            <!-- TASK FORM -->
+            <form id="taskForm" novalidate>
+
+                <div class="modal-body">
+
+                    <!-- TASK TITLE -->
+                    <div class="mb-3">
+                        <label for="taskTitle" class="form-label">Title</label>
+
+                        <input type="text" class="form-control" id="taskTitle" name="title"
+                            placeholder="Enter task title" required>
+
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- PROJECT -->
+                    <div class="mb-3">
+                        <label for="taskProject" class="form-label">Project</label>
+
+                        <select class="form-select" id="taskProject" name="projectId" required>
+
+                            <option value="">Select project</option>
+
+                        </select>
+
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="mb-3">
+                        <label for="taskDescription" class="form-label">
+                            Description
+                        </label>
+
+                        <textarea class="form-control" id="taskDescription" name="description" rows="4"
+                            placeholder="Enter task description">
+                        </textarea>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+
+                        <!-- STATUS -->
+                        <div class="col-12 col-sm-6">
+                            <label for="taskStatus" class="form-label">
+                                Status
+                            </label>
+
+                            <select class="form-select" id="taskStatus" name="status">
+
+                                <option value="todo">To Do</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="done">Done</option>
+
+                            </select>
+
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <!-- PRIORITY -->
+                        <div class="col-12 col-sm-6">
+                            <label for="taskPriority" class="form-label">
+                                Priority
+                            </label>
+
+                            <select class="form-select" id="taskPriority" name="priority">
+
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+
+                            </select>
+
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- DUE DATE -->
+                    <div>
+                        <label for="taskDueDate" class="form-label">
+                            Due Date
+                        </label>
+
+                        <input type="date" class="form-control" id="taskDueDate" name="dueDate">
+
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <!-- MODAL FOOTER -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="taskCancelBtn">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="btn btn-primary" id="taskSaveBtn">
+                        Save Task
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

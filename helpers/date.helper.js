@@ -17,7 +17,6 @@ export function formatDateTime(timestamp){
 }
 
 // DATE INPUT
-
 export function toDateInput(timestamp){
     if(timestamp == null) return "";
 
